@@ -1,6 +1,6 @@
 [versions]
 jdk = "8"
-agp = "8.1.0-alpha02"
+agp = "8.1.0-alpha03"
 kotlin = "1.8.0"
 compose = "1.4.0"
 compileSdk = "33"
