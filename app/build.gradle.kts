@@ -8,8 +8,8 @@ repositories {
     google()
 }
 
-java {
-    toolchain {
+kotlin {
+    jvmToolchain {
         languageVersion.set(JavaLanguageVersion.of(libs.versions.jdk.get().toInt()))
     }
 }

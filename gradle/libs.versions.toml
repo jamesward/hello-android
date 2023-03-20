@@ -1,13 +1,13 @@
 [versions]
 jdk = "8"
-agp = "8.1.0-alpha04"
+agp = "8.1.0-alpha10"
 kotlin = "1.8.10"
 compose = "1.4.2"
 compileSdk = "33"
 minSdk = "24"
 androidx-core = "1.9.0"
-androidx-lifecycle = "2.5.1"
-androidx-activity = "1.6.1"
+androidx-lifecycle = "2.6.0"
+activityCompose = "1.6.1"
 androidxComposeBom = "2023.01.00"
 
 [plugins]
@@ -15,9 +15,9 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
 [libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
 androidx-lifecycle-runtime-kts = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx-lifecycle"}
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidx-activity" }
 
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
 androidx-compose-material = { group = "androidx.compose.material", name = "material" }
