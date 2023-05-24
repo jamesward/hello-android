@@ -6,12 +6,11 @@ plugins {
 repositories {
     mavenCentral()
     google()
+    maven("https://androidx.dev/storage/compose-compiler/repository/")
 }
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(8))
-    }
+kotlin {
+    jvmToolchain(8)
 }
 
 android {
@@ -24,12 +23,12 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.7"
+        kotlinCompilerExtensionVersion = "1.4.7-dev-k1.9.0-Beta-bb7dc8b44eb"
     }
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.10.0")
+    implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.1")
     implementation("androidx.compose.ui:ui:1.4.3")
