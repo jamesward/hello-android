@@ -1,3 +1,5 @@
+rootProject.name = "hello-android"
+
 pluginManagement {
     repositories {
         google()
@@ -6,5 +8,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "My Application"
 include("app")
