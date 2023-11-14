@@ -23,6 +23,7 @@ jobs:
       - name: Setup KVM
         run: |
           ls -al /dev/kvm
+          sudo usermod -a -G kvm $USER
           newgrp kvm
           groups
       #          sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
