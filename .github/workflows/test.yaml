@@ -3,7 +3,8 @@ on: push
 jobs:
   build:
     name: test
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    #runs-on: macos-latest
 
     steps:
       - name: Checkout
@@ -18,6 +19,20 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - uses: SimonMarquis/android-accept-licenses@v1
+
+      - run: |
+          ls -al /dev/kvm
+          sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+          ls -al /dev/kvm
+
+      #    echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+
+          sudo gpasswd -a $USER kvm
+          
+          groups
+      #          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+      #          sudo udevadm control --reload-rules
+      #          sudo udevadm trigger --name-match=kvm
 
       - name: Test
         run: |
